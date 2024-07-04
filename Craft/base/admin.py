@@ -4,8 +4,8 @@ from .models import Articulos
 # Register your models here.
 class AdministrarModelo(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-    list_display = ('nombre', 'producto', 'precio','correo', 'descripcion', 'numero')
-    search_fields =('nombre', 'producto', 'precio', 'numero')
+    list_display = ('id','producto', 'precio', 'descripcion')
+    search_fields =('id', 'producto', 'precio')
     date_hierarchy = 'created'
-    list_filter =('nombre', 'producto', 'precio', 'numero')
+    list_filter =('id', 'producto', 'precio',)
 admin.site.register(Articulos, AdministrarModelo)

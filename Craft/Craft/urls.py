@@ -23,7 +23,9 @@ from base import views as views_base
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ca/', views.ca, name="ca"),
-    path('', views_base.Carrusel, name="Carrusel")
+    path('', views_base.Carrusel, name="Carrusel"),
+    path('ForCarrusel/',views_base.contacto,name="Contacto"),
+    path('registrar/',views_base.registrar,name="Registrar"),
 ]
 
 if settings.DEBUG:
